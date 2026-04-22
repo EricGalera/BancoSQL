@@ -1,0 +1,468 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Banco Provincia de Buenos Aires</title>
+  <link rel="icon" href="https://ext.same-assets.com/3391354337/343581965.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/inicio.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <a href="#" class="logo">
+      <img src="https://ext.same-assets.com/3391354337/4006645169.svg" alt="Banco Provincia">
+    </a>
+    <div class="header-right">
+      <nav class="nav-menu">
+        <a href="#" class="nav-link">Personas</a>
+        <a href="#" class="nav-link">Empresas</a>
+        <a href="#" class="nav-link nav-link two-lines">Provincia<br>Microcréditos</a>
+        <a href="#" class="nav-link nav-link two-lines">Provincia<br>Compras</a>
+        <a href="#" class="nav-link nav-link two-lines">Turnos<br>web</a>
+        <a href="formulario.html" class="nav-btn" id="bipPersonasLink">BIP Personas</a>
+        <a href="#" class="nav-btn">BIP Empresas</a>
+      </nav>
+      <button type="button" class="menu-icon" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="menu-overlay" id="menuOverlay" aria-hidden="true">
+    <aside class="menu-drawer" role="dialog" aria-modal="true" aria-label="Menu principal">
+      <nav class="drawer-nav" aria-label="Menu lateral">
+        <a href="#" class="drawer-link">
+          <span class="drawer-link-left">
+            <span class="drawer-icon">P</span>
+            <span>Personas</span>
+          </span>
+          <span class="drawer-arrow">&rsaquo;</span>
+        </a>
+        <a href="#" class="drawer-link">
+          <span class="drawer-link-left">
+            <span class="drawer-icon">E</span>
+            <span>Empresas</span>
+          </span>
+          <span class="drawer-arrow">&rsaquo;</span>
+        </a>
+        <a href="#" class="drawer-link">
+          <span class="drawer-link-left">
+            <span class="drawer-icon">N</span>
+            <span>Negocios y Profesionales</span>
+          </span>
+          <span class="drawer-arrow">&rsaquo;</span>
+        </a>
+        <a href="#" class="drawer-link">
+          <span class="drawer-link-left">
+            <span class="drawer-icon">S</span>
+            <span>Sector Público</span>
+          </span>
+          <span class="drawer-arrow">&rsaquo;</span>
+        </a>
+        <a href="#" class="drawer-link">
+          <span class="drawer-link-left">
+            <span class="drawer-icon">C</span>
+            <span>Canales</span>
+          </span>
+          <span class="drawer-arrow">&rsaquo;</span>
+        </a>
+        <a href="#" class="drawer-link">
+          <span class="drawer-link-left">
+            <span class="drawer-icon">I</span>
+            <span>Institucional</span>
+          </span>
+          <span class="drawer-arrow">&rsaquo;</span>
+        </a>
+      </nav>
+
+      <div class="drawer-footer">
+        <a href="logout.php" class="drawer-link drawer-logout" id="drawerLogout">
+          <span class="drawer-link-left">
+            <span class="drawer-icon">&times;</span>
+            <span>Cerrar sesion</span>
+          </span>
+        </a>
+        <button type="button" class="drawer-close" id="drawerClose">
+          <span class="drawer-icon">&times;</span>
+          <span>Cerrar</span>
+        </button>
+      </div>
+    </aside>
+  </div>
+
+  <!-- Hero Section with Carousel -->
+  <section class="hero-container">
+    <div class="hero">
+      <div class="carousel">
+        <div class="carousel-slides">
+          <!-- Slide 1 -->
+          <div class="carousel-slide active">
+            <img src="https://ext.same-assets.com/3391354337/1503953821.webp" alt="Date un baño de inversión">
+            <div class="slide-content">
+              <div class="slide-box">
+                <h2>¡Date un baño de inversión!</h2>
+                <a href="#" class="slide-btn">Conocé más</a>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 2 -->
+          <div class="carousel-slide">
+            <img src="https://ext.same-assets.com/3391354337/4228303755.webp" alt="Tarjeta virtual">
+            <div class="slide-content">
+              <div class="slide-box">
+                <h2>Pedí la tarjeta virtual y usala al instante</h2>
+                <a href="#" class="slide-btn">Conocé más</a>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 3 -->
+          <div class="carousel-slide">
+            <img src="https://ext.same-assets.com/3391354337/3420868175.webp" alt="Cuenta DNI">
+            <div class="slide-content">
+              <div class="slide-box">
+                <h2>Novedad Cuenta DNI</h2>
+                <p>Descubrí las nuevas funcionalidades</p>
+                <a href="#" class="slide-btn">Conocé más</a>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 4 -->
+          <div class="carousel-slide">
+            <img src="https://ext.same-assets.com/3391354337/700901227.webp" alt="Copa Mundial FIFA 2026">
+            <div class="slide-content">
+              <div class="slide-box">
+                <h2>Comprá con Visa Banco Provincia y participá para ir a la Copa Mundial de la FIFA 2026</h2>
+                <a href="#" class="slide-btn">Conocé más</a>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 5 -->
+          <div class="carousel-slide">
+            <img src="https://ext.same-assets.com/3391354337/143967273.webp" alt="Premio de Literatura">
+            <div class="slide-content">
+              <div class="slide-box">
+                <h2>Gran Premio Banco Provincia de Literatura 2026</h2>
+                <a href="#" class="slide-btn">Conocé más</a>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 6 -->
+          <div class="carousel-slide">
+            <img src="https://ext.same-assets.com/3391354337/2789825950.webp" alt="Educación financiera">
+            <div class="slide-content">
+              <div class="slide-box">
+                <h2>Nuevo programa radial sobre educación financiera</h2>
+                <a href="#" class="slide-btn">Conocé más</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Navigation Arrows -->
+        <button class="carousel-arrow prev" aria-label="Anterior">
+          <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+        </button>
+        <button class="carousel-arrow next" aria-label="Siguiente">
+          <svg viewBox="0 0 24 24"><path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z"/></svg>
+        </button>
+
+        <!-- Floating Icons -->
+        <div class="floating-icons">
+          <a href="#" class="floating-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"/></svg>
+          </a>
+          <a href="#" class="floating-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          </a>
+          <a href="#" class="floating-icon">
+            <svg viewBox="0 0 24 24"><path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/></svg>
+          </a>
+          <a href="#" class="floating-icon">
+            <svg viewBox="0 0 24 24"><path d="M20 5H4c-1.1 0-1.99.9-1.99 2L2 17c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm-9 3h2v2h-2V8zm0 3h2v2h-2v-2zM8 8h2v2H8V8zm0 3h2v2H8v-2zm-1 2H5v-2h2v2zm0-3H5V8h2v2zm9 7H8v-2h8v2zm0-4h-2v-2h2v2zm0-3h-2V8h2v2zm3 3h-2v-2h2v2zm0-3h-2V8h2v2z"/></svg>
+          </a>
+          <a href="#" class="floating-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
+          </a>
+        </div>
+
+        <!-- Slider Dots -->
+        <div class="slider-dots">
+          <span class="dot active" data-slide="0"></span>
+          <span class="dot" data-slide="1"></span>
+          <span class="dot" data-slide="2"></span>
+          <span class="dot" data-slide="3"></span>
+          <span class="dot" data-slide="4"></span>
+          <span class="dot" data-slide="5"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dollar Quote Bar -->
+    <div class="dollar-bar">
+      <span>Cotización del dólar:</span>
+      <span>Compra: <strong>$1350,00</strong></span>
+      <span>Venta: <strong>$1400,00</strong></span>
+      <span>Últ. actualización: 11:15</span>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section class="products-section">
+    <div class="products-grid">
+      <a href="#" class="product-card">
+        <img src="https://ext.same-assets.com/3391354337/1411227693.webp" alt="Date un baño de inversión">
+        <div class="product-card-content">
+          <h3>¡Date un baño de inversión!</h3>
+          <p>Sumergite en una nueva forma de invertir: información, herramientas y oportunidades para hacer crecer tu dinero de forma inteligente.</p>
+        </div>
+      </a>
+      <a href="#" class="product-card">
+        <img src="https://ext.same-assets.com/3391354337/898357816.webp" alt="Profesionales y Negocios">
+        <div class="product-card-content">
+          <h3>Paquete de productos para Profesionales y Negocios</h3>
+          <p>Reducí costos y potenciá tu negocio o emprendimiento.</p>
+        </div>
+      </a>
+      <a href="#" class="product-card">
+        <img src="https://ext.same-assets.com/3391354337/3651200819.webp" alt="Cuenta DNI">
+        <div class="product-card-content">
+          <h3>Hacete Cuenta DNI y disfrutá de todos los beneficios</h3>
+          <p>Descargá la app en tu celu: es gratis y 100% digital.</p>
+        </div>
+      </a>
+      <a href="#" class="product-card">
+        <img src="https://ext.same-assets.com/3391354337/1085391462.webp" alt="Centro de Seguridad">
+        <div class="product-card-content">
+          <h3>Centro de Seguridad</h3>
+          <p>Prevení fraudes, identificá estafas y sabé cómo actuar ante cualquier intento de engaño para proteger tus datos.</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="benefits-section">
+    <div class="benefits-grid">
+      <a href="#" class="benefit-card large">
+        <img src="https://ext.same-assets.com/3391354337/12004903.webp" alt="Beneficios">
+        <span class="benefit-label">Beneficios</span>
+        <div class="benefit-content">
+          <h3>Ahorrá todos los días con beneficios pensados para vos</h3>
+          <p>Comprá todo lo que necesites con tus tarjetas del Banco Provincia.</p>
+        </div>
+      </a>
+      <div class="benefits-right">
+        <a href="#" class="benefit-row">
+          <img src="https://ext.same-assets.com/3391354337/3119830877.webp" alt="Provincia Compras">
+          <div class="benefit-row-text">
+            <span class="benefit-label" style="position:relative;top:0;left:0;margin-bottom:10px;display:inline-block;width:fit-content;">Provincia Compras</span>
+            <h3>Comprá en cuotas sin interés en nuestra tienda virtual</h3>
+            <p>Elegí entre productos de electro, deportes, calzado, juguetería, moda y mucho más.</p>
+          </div>
+        </a>
+        <a href="#" class="benefit-row">
+          <img src="https://ext.same-assets.com/3391354337/1165234055.webp" alt="Mesumo">
+          <div class="benefit-row-text">
+            <span class="benefit-label" style="position:relative;top:0;left:0;margin-bottom:10px;display:inline-block;width:fit-content;">Mesumo</span>
+            <h3>Conocé el catálogo de premios</h3>
+            <p>Canjeá tus puntos por productos, vouchers y experiencias. ¡Tenés más de 20 rubros para elegir!</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sectors Section -->
+  <section class="sectors-section">
+    <div class="sectors-grid">
+      <a href="#" class="sector-card">
+        <div class="sector-image">
+          <img src="https://ext.same-assets.com/3391354337/360914948.webp" alt="Agro">
+          <span class="sector-title">Agro</span>
+        </div>
+        <div class="sector-content">
+          <p>Procampo Digital: la solución para que puedas realizar tus compras con una financiación especial en dólares y pesos.</p>
+        </div>
+      </a>
+      <a href="#" class="sector-card">
+        <div class="sector-image">
+          <img src="https://ext.same-assets.com/3391354337/3242053700.webp" alt="Comex">
+          <span class="sector-title">Comex</span>
+        </div>
+        <div class="sector-content">
+          <p>Un impulso para el desarrollo de tus negocios.</p>
+        </div>
+      </a>
+      <a href="#" class="sector-card">
+        <div class="sector-image">
+          <img src="https://ext.same-assets.com/3391354337/2079316793.webp" alt="Inversiones">
+          <span class="sector-title">Inversiones</span>
+        </div>
+        <div class="sector-content">
+          <p>Encontrá las mejores alternativas de inversión.</p>
+        </div>
+      </a>
+      <a href="#" class="sector-card">
+        <div class="sector-image">
+          <img src="https://ext.same-assets.com/3391354337/1479366982.webp" alt="Industria">
+          <span class="sector-title">Industria</span>
+        </div>
+        <div class="sector-content">
+          <p>Financiación, beneficios y respaldo para tu empresa.</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Back to Top -->
+  <div class="back-to-top">
+    <a href="#" class="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
+      </svg>
+    </a>
+  </div>
+
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <a href="#" class="contact-item">
+      <div class="contact-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+      </div>
+      <span>Encontranos</span>
+    </a>
+    <a href="#" class="contact-item">
+      <div class="contact-icon">
+        <svg viewBox="0 0 24 24"><path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/></svg>
+      </div>
+      <span>Contactanos</span>
+    </a>
+    <a href="#" class="contact-item">
+      <div class="contact-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"/></svg>
+      </div>
+      <span>Te ayudamos</span>
+    </a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-column">
+        <h4>Institucional</h4>
+        <ul>
+          <li><a href="#">Autoridades</a></li>
+          <li><a href="#">Carta Orgánica</a></li>
+          <li><a href="#">Organigrama</a></li>
+          <li><a href="#">Estados financieros</a></li>
+          <li><a href="#">Disciplina de Mercado</a></li>
+          <li><a href="#">Estudios Económicos</a></li>
+          <li><a href="#">Gobierno Institucional</a></li>
+          <li><a href="#">Sostenibilidad</a></li>
+          <li><a href="#">Banca Empresas</a></li>
+          <li><a href="#">Prensa y Noticias</a></li>
+          <li><a href="#">Trabajar en Banco Provincia</a></li>
+          <li><a href="#">Mujeres y Diversidades</a></li>
+          <li><a href="#">Programa Incluir</a></li>
+          <li><a href="#">PulsoPBA</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Información legal</h4>
+        <ul>
+          <li><a href="#">Atención al Usuario de Servicios Financieros</a></li>
+          <li><a href="#">Información al Usuario de Servicios Financieros</a></li>
+          <li><a href="#">Régimen de transparencia del BCRA</a></li>
+          <li><a href="#">Portal del Cliente Bancario</a></li>
+          <li><a href="#">AlyC</a></li>
+          <li><a href="#">Debida Diligencia</a></li>
+          <li><a href="#">PEPs y Sujetos Obligados</a></li>
+          <li><a href="#">Defensa del Consumidor</a></li>
+          <li><a href="#">Protección de Datos Personales</a></li>
+          <li><a href="#">Política de Privacidad</a></li>
+          <li><a href="#">Registro de Profesionales Externos de la Abogacía</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Ayuda y guías</h4>
+        <ul>
+          <li><a href="#">App Cuenta DNI</a></li>
+          <li><a href="#">Simuladores Plazos Fijos</a></li>
+          <li><a href="#">Asesoramiento sobre deudas con atraso</a></li>
+          <li><a href="#">ATM personas con discapacidad visual</a></li>
+          <li><a href="#">Centro de Seguridad</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Otros sitios de interés</h4>
+        <ul>
+          <li><a href="#">Compras y licitaciones</a></li>
+          <li><a href="#">Oportunidades inmobiliarias</a></li>
+          <li><a href="#">Subastas</a></li>
+          <li><a href="#">Provincia Servicios Financieros</a></li>
+          <li><a href="#">Grupo Provincia</a></li>
+          <li><a href="#">Museo Banco Provincia</a></li>
+          <li><a href="#">Cátedra Arturo Jauretche</a></li>
+          <li><a href="#">CITAB</a></li>
+          <li><a href="#">Provincia Microcréditos</a></li>
+          <li><a href="#">Fundación Banco Provincia</a></li>
+          <li><a href="#">Buenos Aires Provincia</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Social Section -->
+    <div class="social-section">
+      <div class="social-row">
+        <div class="social-left">
+          <span>Seguinos en:</span>
+          <div class="social-icons">
+            <a href="#" class="social-icon">
+              <svg viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg>
+            </a>
+            <a href="#" class="social-icon">
+              <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="#" class="social-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.254 1.216.598 1.772 1.153.509.5.902 1.105 1.153 1.772.247.637.415 1.363.465 2.428.047 1.066.06 1.405.06 4.122 0 2.717-.01 3.056-.06 4.122-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 01-1.153 1.772c-.5.508-1.105.902-1.772 1.153-.637.247-1.363.415-2.428.465-1.066.047-1.405.06-4.122.06-2.717 0-3.056-.01-4.122-.06-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 01-1.772-1.153 4.904 4.904 0 01-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.013 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122.05-1.066.217-1.79.465-2.428a4.88 4.88 0 011.153-1.772A4.897 4.897 0 015.45 2.525c.638-.248 1.362-.415 2.428-.465C8.944 2.013 9.283 2 12 2zm0 1.802c-2.67 0-2.986.01-4.04.058-.976.045-1.505.207-1.858.344-.466.182-.8.398-1.15.748-.35.35-.566.684-.748 1.15-.137.353-.3.882-.344 1.857-.048 1.055-.058 1.37-.058 4.041 0 2.67.01 2.986.058 4.04.045.976.207 1.505.344 1.858.182.466.399.8.748 1.15.35.35.684.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058 2.67 0 2.987-.01 4.04-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.684.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041 0-2.67-.01-2.986-.058-4.04-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.055-.048-1.37-.058-4.041-.058zm0 3.063a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 8.468a3.333 3.333 0 100-6.666 3.333 3.333 0 000 6.666zm6.538-8.671a1.2 1.2 0 11-2.4 0 1.2 1.2 0 012.4 0z"/></svg>
+            </a>
+            <a href="#" class="social-icon">
+              <svg viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+            </a>
+            <a href="#" class="social-icon">
+              <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-badges">
+          <div class="footer-badge">
+            <span>Botón de arrepentimiento</span>
+          </div>
+          <div class="footer-badge">
+            <span>Contratos de adhesión</span>
+          </div>
+          <div class="footer-badge orange">
+            <span>USUARIOS FINANCIEROS<br>Visitá nuestra web</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <a href="#">Términos y condiciones de navegabilidad de sitio web</a>
+      <p>© 2026 - Banco de la Provincia de Buenos Aires - Casa Matriz: Calle 7 N° 726 (B1900TFS) La Plata, Buenos Aires, Argentina.</p>
+    </div>
+  </footer>
+
+  <!-- Carousel JavaScript -->
+  <script src='js/inicio.js'></script>
+
+</body>
+</html>
+

